@@ -17,9 +17,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 
     //currently getting static details
+    //need to send USerDetails String object since we need to create Authentication object
+    // that we can set in SecurityContextHolder.setDetails(authentication)
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        if(getUserDetails().containsKey("username")) {
+        if(getUserDetails().containsKey(username)) {
             return getUserDetails().get(username);
         }
         throw new UsernameNotFoundException("Username - "+username+" not present !");

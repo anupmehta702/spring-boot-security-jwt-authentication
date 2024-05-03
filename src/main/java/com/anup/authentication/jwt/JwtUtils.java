@@ -1,6 +1,5 @@
 package com.anup.authentication.jwt;
 
-import com.anup.authentication.services.UserDetailsServiceImpl;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
